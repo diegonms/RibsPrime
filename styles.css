@@ -11,10 +11,9 @@ p {
 footer {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
+  padding: 30px;
+  margin-top: 30px;
   text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
 }
 .footer-container {
   display: flex;
@@ -23,16 +22,31 @@ footer {
   max-width: 1000px;
   margin: auto;
   padding: 20px;
+  flex-wrap: wrap;
 }
 .footer-left,
 .footer-right {
-  width: 45%;
+  width: 48%;
   text-align: center;
 }
 .footer-divider {
   width: 2px;
-  height: 250px;
+  height: 100%;
   background-color: white;
+}
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer-divider {
+    display: none;
+  }
 }
 
 body {
@@ -107,10 +121,10 @@ header h1 {
   display: flex;
   align-items: center;
   background: #333;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 19px;
+  margin: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease;
 }
 
@@ -155,7 +169,16 @@ header h1 {
   .menu-text {
     width: 100%;
   }
-  footer {
-    padding: 15px;
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer-divider {
+    display: none;
   }
 }
